@@ -156,6 +156,7 @@ This endpoint retrieves courses in a partner. By default it returns courses in t
 | filter[in_library]         | Specify this filter to get courses in libraries that the user has access to (i.e., courses that the user can enroll in). |
 | sort                       | Orders the results based on the param. <br>Example: `name` - sort in alphabetical order                                  |
 | page[number]               | Courses are paginated, use this to choose which page you want                                                            |
+| filter[role]               | Set to `instructor` to return all courses in the partner.                                                                |
 
 ### Course Object
 
