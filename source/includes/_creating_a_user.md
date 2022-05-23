@@ -40,7 +40,7 @@ curl 'https://partners.cerego.com/v3/partners/:partner_id/users' \
 
 `POST https://partners.cerego.com/v3/partners/:partner_id/users`
 
-### Query Parameters
+### Request Parameters
 
 | Parameter | Description                |
 | --------- | -------------------------- |

@@ -12,6 +12,7 @@ includes:
   - authentication
   - importing_content
   - creating_a_user
+  - saving_quiz_results
   - getting_items_to_study
   - assignments
   - courses

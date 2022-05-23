@@ -45,7 +45,7 @@ This endpoint creates a set.
 
 `POST https://partners.cerego.com/v3/sets`
 
-### Query Parameters
+### Request Parameters
 
 | Parameter  | Description                    |
 | ---------- | ------------------------------ |
@@ -100,7 +100,7 @@ This endpoint creates an item within a set. You can optionally specify a questio
 
 `POST https://partners.cerego.com/v3/sets/:set_id/learning_items`
 
-### Query Parameters
+### Request Parameters
 
 | Parameter | Description                                           |
 | --------- | ----------------------------------------------------- |
