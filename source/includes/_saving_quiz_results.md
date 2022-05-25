@@ -9,7 +9,7 @@ curl 'https://partners.cerego.com/v3/study' \
  -X POST \
  -H 'Authorization: Bearer <API_KEY>' \
  -H 'Content-Type: application/json' \
- -d '{"user_id":"1185304", "partner_id": "779", "study_time_millis":4930, "learning_engine_guid":"4ec0d7e2-a986-487d-9682-9ba6bbcb4cea", "quiz_result":"Correct"}'
+ -d '{"user_id":"1185304", "partner_id": "779", "study_time_millis":4930, "item_id":"87663", "quiz_result":"Correct"}'
 ```
 
 > The above command returns a 204 status code if successful
@@ -20,13 +20,13 @@ curl 'https://partners.cerego.com/v3/study' \
 
 ### Request Parameters
 
-| Parameter            | Description                                                                                                                                                                                                                                      |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| user_id              | The Cerego ID of the user who performed the study                                                                                                                                                                                                |
-| partner_id           | The ID of your partner account                                                                                                                                                                                                                   |
-| learning_engine_guid | The learning engine GUID of the item that was studied                                                                                                                                                                                            |
-| quiz_result          | Should be "Correct" or "Incorrect". Optionally, you can specify "AlmostCorrect" if the user wasn't correct, but was close (eg. a spelling quiz where the user misses only one letter)                                                            |
-| study_time_millis    | The number of milliseconds the user spent on an item. Using a typical multiple choice question as an example, this would be the total time including reading the question, answering, as well as time spent viewing if they were correct or not. |
+| Parameter         | Description                                                                                                                                                                                                                                      |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| user_id           | The Cerego ID of the user who performed the study                                                                                                                                                                                                |
+| partner_id        | The ID of your partner account                                                                                                                                                                                                                   |
+| item_id           | The ID of the item that was studied                                                                                                                                                                                                              |
+| quiz_result       | Should be "Correct" or "Incorrect". Optionally, you can specify "AlmostCorrect" if the user wasn't correct, but was close (eg. a spelling quiz where the user misses only one letter)                                                            |
+| study_time_millis | The number of milliseconds the user spent on an item. Using a typical multiple choice question as an example, this would be the total time including reading the question, answering, as well as time spent viewing if they were correct or not. |
 
 ### HTTP Response
 

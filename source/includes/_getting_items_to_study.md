@@ -22,7 +22,6 @@ curl 'https://partners.cerego.com/v3/study?partner_id=779&user_id=12345&set_id=5
         "created-at": "2021-05-27T06:13:59.000Z",
         "question": "What is two plus two?",
         "answer": "four",
-        "learning-engine-guid": "e7fb6554-74a2-4d18-918c-7cf2896d265c",
         ...
       },
       "relationships": {

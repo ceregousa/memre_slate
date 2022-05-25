@@ -77,7 +77,6 @@ curl 'https://partners.cerego.com/v3/sets/1002204/learning_items' \
       "created-at": "2021-05-27T06:13:59.000Z",
       "question": "What is two plus two?",
       "answer": "four",
-      "learning-engine-guid": "e7fb6554-74a2-4d18-918c-7cf2896d265c",
       ...
     },
     "relationships": {
@@ -109,4 +108,4 @@ This endpoint creates an item within a set. You can optionally specify a questio
 
 ### HTTP Response
 
-The response will include the item’s learning engine GUID which you will use in other API calls. The item will be created in the specified set.
+The response will include the item’s ID which you will use in other API calls. The item will be created in the specified set.
