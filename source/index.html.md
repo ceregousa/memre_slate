@@ -14,6 +14,7 @@ includes:
   - creating_a_user
   - saving_quiz_results
   - getting_items_to_study
+  - getting_learning_stats
   - assignments
   - courses
   - courses/users
