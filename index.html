@@ -1,0 +1,1677 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="images/favicon.ico" rel="icon" type="image/ico" />
+    <title>API Reference</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;shell&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.png" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+          </li>
+          <li>
+            <a href="#importing-content" class="toc-h1 toc-link" data-title="Importing Content">Importing Content</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#creating-a-set" class="toc-h2 toc-link" data-title="Creating a Set">Creating a Set</a>
+                  </li>
+                  <li>
+                    <a href="#creating-an-item" class="toc-h2 toc-link" data-title="Creating an Item">Creating an Item</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#creating-a-user" class="toc-h1 toc-link" data-title="Creating a User">Creating a User</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-request" class="toc-h2 toc-link" data-title="HTTP Request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#request-parameters" class="toc-h2 toc-link" data-title="Request Parameters">Request Parameters</a>
+                  </li>
+                  <li>
+                    <a href="#http-response" class="toc-h2 toc-link" data-title="HTTP Response">HTTP Response</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#saving-quiz-results" class="toc-h1 toc-link" data-title="Saving Quiz Results">Saving Quiz Results</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#save-the-results-of-a-user-studying-an-item" class="toc-h2 toc-link" data-title="Save the results of a user studying an item">Save the results of a user studying an item</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#getting-items-to-study" class="toc-h1 toc-link" data-title="Getting Items to Study">Getting Items to Study</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#getting-items-to-study-for-maximal-knowledge-retention" class="toc-h2 toc-link" data-title="Getting items to study for maximal knowledge retention">Getting items to study for maximal knowledge retention</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#getting-learning-stats" class="toc-h1 toc-link" data-title="Getting Learning Stats">Getting Learning Stats</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#getting-the-predicted-best-times-of-day-for-the-user-to-study" class="toc-h2 toc-link" data-title="Getting the predicted best times of day for the user to study">Getting the predicted best times of day for the user to study</a>
+                  </li>
+                  <li>
+                    <a href="#getting-the-user-39-s-readiness-score-for-a-set" class="toc-h2 toc-link" data-title="Getting the user's readiness score for a set">Getting the user's readiness score for a set</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#assignments" class="toc-h1 toc-link" data-title="Assignments">Assignments</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-the-assignments-in-a-course" class="toc-h2 toc-link" data-title="Get the assignments in a course">Get the assignments in a course</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#courses" class="toc-h1 toc-link" data-title="Courses">Courses</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-courses" class="toc-h2 toc-link" data-title="Get courses">Get courses</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#users" class="toc-h1 toc-link" data-title="Users">Users</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-users-in-a-course" class="toc-h2 toc-link" data-title="Get all users in a course">Get all users in a course</a>
+                  </li>
+                  <li>
+                    <a href="#add-a-user-to-a-course" class="toc-h2 toc-link" data-title="Add a user to a course">Add a user to a course</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-user-in-a-course" class="toc-h2 toc-link" data-title="Get a user in a course">Get a user in a course</a>
+                  </li>
+                  <li>
+                    <a href="#remove-a-user-from-a-course" class="toc-h2 toc-link" data-title="Remove a user from a course">Remove a user from a course</a>
+                  </li>
+                  <li>
+                    <a href="#get-users-in-a-partner" class="toc-h2 toc-link" data-title="Get users in a partner">Get users in a partner</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#user-tags" class="toc-h1 toc-link" data-title="User Tags">User Tags</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#about-user-tags" class="toc-h2 toc-link" data-title="About user tags">About user tags</a>
+                  </li>
+                  <li>
+                    <a href="#set-a-user-39-s-tags" class="toc-h2 toc-link" data-title="Set a user's tags">Set a user's tags</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+          </li>
+      </div>
+        <ul class="toc-footer">
+            <li><a href='https://cerego.com/'>Check out the Cerego website</a></li>
+            <li><a href='https://cerego.com/app/nav/partners/api_users'>Get your API Key</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<blockquote>
+<p>To test your connection to our API please use</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl https://partners.cerego.com/v3/my/profile <span class="se">\</span>
+    -H <span class="s2">"Authorization: Bearer &lt;API_KEY&gt;"</span>
+</code></pre>
+<p>Welcome to the Cerego API! You can use our API to access Cerego endpoints, which you can use to manage the users in your courses.</p>
+
+<p>Our API follows the <a href="http://jsonapi.org/">JSON API</a> standard. Please take note how objects within a certain resource are in the <code>included</code> section.</p>
+
+<p>All endpoints will start with the following URL and follow standard RESTful practices.</p>
+
+<p><code>https://partners.cerego.com/v3/</code></p>
+
+<p>All requests should be made over SSL and it is recommended to use JSON to format your requests.</p>
+<h1 id='authentication'>Authentication</h1>
+<p>To authenticate to the Cerego API, first you will need to create an API key. Login to Cerego as an admin for your partner and then <a href="https://cerego.com/app/nav/partners/api_users">visit the API Keys page</a>.</p>
+
+<p>Cerego expects the API key to be included in all API requests to the server in a header. The header should look like:</p>
+
+<p><code>Authorization: Bearer cDPuiaEQrttyDpGU8a1aJtltFUDJY9W31Hi/K+SY9c2WuqHio3dBVtBjagLxyh6U</code></p>
+
+<aside class="notice">
+You must replace <code>cDPuiaEQrttyDpGU8a1aJtltFUDJY9W31Hi/K+SY9c2WuqHio3dBVtBjagLxyh6U</code> with your API key.
+</aside>
+<h1 id='importing-content'>Importing Content</h1>
+<p>Content in Cerego is organized into “sets” and “items”. A set is a collection of items and can have a maximum of 200 items. An item represents an individual thing that our learning engine optimizes the studying of. An item could be a single question and answer, or it could be multiple questions and answers that all quiz the same underlying concept (like various math questions that ask the user to multiply two numbers together).</p>
+<h2 id='creating-a-set'>Creating a Set</h2><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://partners.cerego.com/v3/sets'</span> <span class="se">\</span>
+ -X POST <span class="se">\</span>
+ -H <span class="s1">'Authorization: Bearer &lt;API_KEY&gt;'</span> <span class="se">\</span>
+ -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+ -d <span class="s1">'{"name":"set name","partner_id":"779"}'</span>
+
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sets"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"created-at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-05-27T06:13:59.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"set name"</span><span class="p">,</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v3/sets/set-name"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"total-pages"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"total-count"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint creates a set.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>POST https://partners.cerego.com/v3/sets</code></p>
+<h3 id='request-parameters'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>The name of the set.</td>
+</tr>
+<tr>
+<td>partner_id</td>
+<td>The ID of your partner account</td>
+</tr>
+</tbody></table>
+<h3 id='http-response'>HTTP Response</h3>
+<p>The response will include the id of the newly created set. You should save this ID for later use with other APIs.</p>
+<h2 id='creating-an-item'>Creating an Item</h2><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://partners.cerego.com/v3/sets/1002204/learning_items'</span> <span class="se">\</span>
+ -X POST <span class="se">\</span>
+ -H <span class="s1">'Authorization: Bearer &lt;API_KEY&gt;'</span> <span class="se">\</span>
+ -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+ -d <span class="s1">'{"question":"What is two plus two?","answer":"four"}'</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"learning-items"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"created-at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-05-27T06:13:59.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"question"</span><span class="p">:</span><span class="w"> </span><span class="s2">"What is two plus two?"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"answer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"four"</span><span class="p">,</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v3/items/123456"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"total-pages"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"total-count"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint creates an item within a set. You can optionally specify a question and answer for the item. If your item isn&#39;t a simple question with an answer, simply omit the question and answer.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST https://partners.cerego.com/v3/sets/:set_id/learning_items</code></p>
+<h3 id='request-parameters-2'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>question</td>
+<td>Optional text representing the question being asked</td>
+</tr>
+<tr>
+<td>answer</td>
+<td>Optional text representing the answer to the question</td>
+</tr>
+</tbody></table>
+<h3 id='http-response-2'>HTTP Response</h3>
+<p>The response will include the item’s ID which you will use in other API calls. The item will be created in the specified set.</p>
+<h1 id='creating-a-user'>Creating a User</h1>
+<p>Every learner in your system should have a corresponding user in Cerego.</p>
+<pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://partners.cerego.com/v3/partners/:partner_id/users'</span> <span class="se">\</span>
+ -X POST <span class="se">\</span>
+ -H <span class="s1">'Authorization: Bearer &lt;API_KEY&gt;'</span> <span class="se">\</span>
+ -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+ -d <span class="s1">'{"name":"John"}'</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"created-at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-05-27T06:13:59.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John"</span><span class="p">,</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v3/users/123456"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"total-pages"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"total-count"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request'>HTTP Request</h3>
+<p><code>POST https://partners.cerego.com/v3/partners/:partner_id/users</code></p>
+<h3 id='request-parameters'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>Optional name of the user.</td>
+</tr>
+<tr>
+<td>email</td>
+<td>Optional email of the user</td>
+</tr>
+</tbody></table>
+<h3 id='http-response'>HTTP Response</h3>
+<p>The response will include the id of the newly created user. You should save this ID for later use with other APIs.</p>
+<h1 id='saving-quiz-results'>Saving Quiz Results</h1>
+<p>Every time a student studies an item in your system, you should send the results to our learning engine. This will allow our system to make predictions about various things for the student and also for the items that are being studied. Our system learns what items are easy or hard for a particular student and as multiple students study, it also learns which items are harder or easier than other items. It can use this information to make predictions about which items are the optimal items that a student should review, as well as predict a student’s “readiness score” for each item.</p>
+<h2 id='save-the-results-of-a-user-studying-an-item'>Save the results of a user studying an item</h2><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://partners.cerego.com/v3/study'</span> <span class="se">\</span>
+ -X POST <span class="se">\</span>
+ -H <span class="s1">'Authorization: Bearer &lt;API_KEY&gt;'</span> <span class="se">\</span>
+ -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+ -d <span class="s1">'{"user_id":"1185304", "partner_id": "779", "study_time_millis":4930, "item_id":"87663", "quiz_result":"Correct"}'</span>
+</code></pre>
+<blockquote>
+<p>The above command returns a 204 status code if successful</p>
+</blockquote>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>POST https://partners.cerego.com/v3/study</code></p>
+<h3 id='request-parameters'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>user_id</td>
+<td>The Cerego ID of the user who performed the study</td>
+</tr>
+<tr>
+<td>partner_id</td>
+<td>The ID of your partner account</td>
+</tr>
+<tr>
+<td>item_id</td>
+<td>The ID of the item that was studied</td>
+</tr>
+<tr>
+<td>quiz_result</td>
+<td>Should be &quot;Correct&quot; or &quot;Incorrect&quot;. Optionally, you can specify &quot;AlmostCorrect&quot; if the user wasn&#39;t correct, but was close (eg. a spelling quiz where the user misses only one letter)</td>
+</tr>
+<tr>
+<td>study_time_millis</td>
+<td>The number of milliseconds the user spent on an item. Using a typical multiple choice question as an example, this would be the total time including reading the question, answering, as well as time spent viewing if they were correct or not.</td>
+</tr>
+</tbody></table>
+<h3 id='http-response'>HTTP Response</h3>
+<p>Responds with a 204 status code if successful.</p>
+<h1 id='getting-items-to-study'>Getting Items to Study</h1>
+<p>Our learning engine can predict which items a user should review in order to maximize long term retention.</p>
+<h2 id='getting-items-to-study-for-maximal-knowledge-retention'>Getting items to study for maximal knowledge retention</h2><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://partners.cerego.com/v3/study?partner_id=779&amp;user_id=12345&amp;set_id=5678'</span> <span class="se">\</span>
+ -H <span class="s1">'Authorization: Bearer &lt;API_KEY&gt;'</span> <span class="se">\</span>
+
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"learning-items"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"created-at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-05-27T06:13:59.000Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"question"</span><span class="p">:</span><span class="w"> </span><span class="s2">"What is two plus two?"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"answer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"four"</span><span class="p">,</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v3/items/123456"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"total-pages"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"total-count"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint returns learning items in an order that is optimal for long term retention for the user.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://partners.cerego.com/v3/study</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>user_id</td>
+<td>The id of the user you want to get learning items for</td>
+</tr>
+<tr>
+<td>partner_id</td>
+<td>The ID of your partner account</td>
+</tr>
+<tr>
+<td>set_id</td>
+<td>Optional ID of the set you want to get learning items for. If not specified, the endpoint will return items which are ready for review from across all sets the user has studied.</td>
+</tr>
+</tbody></table>
+<h3 id='http-response'>HTTP Response</h3>
+<p>The response will be an array of learning items. If a set_id is specified then both items from the set the user hasn&#39;t studied yet and also items which the user studied, but are ready for review will be returned. If a set_id is not specified, then items ready for review from across all sets the user has studied will be returned.</p>
+<h1 id='getting-learning-stats'>Getting Learning Stats</h1>
+<p>Our learning engine can give you info about the user&#39;s knowledge.</p>
+<h2 id='getting-the-predicted-best-times-of-day-for-the-user-to-study'>Getting the predicted best times of day for the user to study</h2>
+<p>This endpoint returns an object indicating the predicted best times of day for the user to study.</p>
+<pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://partners.cerego.com/v3/users/123456/learning_stats?partner_id=779'</span> <span class="se">\</span>
+ -H <span class="s1">'Authorization: Bearer &lt;API_KEY&gt;'</span> <span class="se">\</span>
+
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user-learning-stats"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"predicted-efficiency-by-hour"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"0"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.6817623590590236</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"1"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.7392679289352317</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"2"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.6741286832391928</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"3"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5505325348708183</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"4"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5703524097996383</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"5"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.6401751938230529</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"6"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5650987172034425</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"7"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.7438633079598264</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"8"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5396156398191866</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"9"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5216558829079918</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"10"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"11"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5418908308550081</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"12"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"13"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5583391320639809</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"14"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.6132052646002262</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"15"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.6806750042126359</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"16"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.6978540362089123</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"17"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.6408447467901008</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"18"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5675780797573757</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"19"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5945802720384398</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"20"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.592000126751934</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"21"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.6485270371342018</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"22"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.6147188037501468</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"23"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5985007258321375</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"total-pages"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"total-count"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://partners.cerego.com/v3/users/:user_id/learning_stats</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>partner_id</td>
+<td>The ID of your partner account</td>
+</tr>
+</tbody></table>
+<h3 id='http-response'>HTTP Response</h3>
+<p>An object that includes an object with 24 values, each of which is a predicted efficiency of learning for that hour of the day. Example:
+{... &quot;predicted-efficiency-by-hour&quot;: {&quot;0&quot;: 0.1, &quot;1&quot;: 0.1, &quot;2&quot;: 0.3, &quot;3&quot; 0.5,..., &quot;22&quot;: 0.9, &quot;23:&quot; 0.2} ...}.
+The values will be in the range of 0 to 1. Higher numbers correspond to better times of day for the user to study. The hours correspond to hours in UTC time.</p>
+<h2 id='getting-the-user-39-s-readiness-score-for-a-set'>Getting the user&#39;s readiness score for a set</h2>
+<p>A user’s readiness score is a value between 0 and 1 indicating how likely the user will be able to recall the concepts of the set. See this <a href="https://www.cerego.com/blog/new-feature-release-readiness-score-measures-knowledge-in-real-time">blog post</a> for more information.</p>
+<pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://partners.cerego.com/v3/users/123456/sets/943433/learning_stats?partner_id=779'</span> <span class="se">\</span>
+ -H <span class="s1">'Authorization: Bearer &lt;API_KEY&gt;'</span> <span class="se">\</span>
+
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456-943433"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"set-learning-stats"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"readiness"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.7791311472859385</span><span class="w"> </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"total-pages"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="s2">"total-count"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://partners.cerego.com/v3/users/:user_id/sets/:set_id/learning_stats</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>partner_id</td>
+<td>The ID of your partner account</td>
+</tr>
+</tbody></table>
+<h3 id='http-response-2'>HTTP Response</h3>
+<p>An object that includes the readiness score of the set for that user.</p>
+<h1 id='assignments'>Assignments</h1><h2 id='get-the-assignments-in-a-course'>Get the assignments in a course</h2><pre class="highlight shell tab-shell"><code>curl https://partners.cerego.com/v3/courses/:id/assignments
+    -H <span class="s2">"Content-Type: application/json"</span>
+    -H <span class="s2">"Authorization: Bearer &lt;API_KEY&gt;"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1002204"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sets"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"created-at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-02-02T19:48:36.000Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"introduction-e199d4e9-fa2a-42c2-9e01-b03992cb99ff"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Introduction"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description-html"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"is-featured"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"items-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"memories-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"studiable-items-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"studiable-memories-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"content-updated-at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-02-02T19:48:42.000Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"remixable-type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"remixed-only"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ic-items-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"study-time-in-sec"</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"scorm-package-id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"course-information"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"learn-version"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"goal-type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"set"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"is-shared"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"privacy-type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Private"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"language"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1819"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"languages"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"response-language"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1819"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"languages"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"creator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"21"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"partners"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"characteristics"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"parent-set"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v3/courses/okdxe9m7/sets/1002204"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"can-edit"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"due-at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"course-set-created-at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-02-02T19:48:37.000Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"level-goal"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"published"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"publish-at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"prereq-assignment-id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"prereq-type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"prereq-value"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"assignment-id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2855792</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"course-id"</span><span class="p">:</span><span class="w"> </span><span class="mi">208786</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"percent-started"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"memory-aggregate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"difficulty-bucket"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"last-study-time"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"see-next-at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"total-study-time-millis"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"accuracy"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"level"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"presentations-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"average-review-interval"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"average-current-retention"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"average-easiness-modifier"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"studied-items-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"unstarted-items-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"eligible-items-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"percent-correct"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"score"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"progress"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"learn-messaging"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"primary-text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Get started!"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"milestone_complete_any_started"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"button-primary-text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Let's do this!"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"total-pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"total-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves the assignments in a course.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://partners.cerego.com/v3/courses/:id/assignments</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>user_id</td>
+<td>Specify a user id to retrieve data related to the user&#39;s progress in each assignment.</td>
+</tr>
+</tbody></table>
+<h3 id='assignment-object'>Assignment Object</h3><h3 id='attributes'>- Attributes</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>The name of the assignment</td>
+</tr>
+<tr>
+<td>goal-type</td>
+<td>integer</td>
+<td>Specifies the type of assignment. Can be <code>set</code>, <code>assessment</code>, or <code>survey</code></td>
+</tr>
+</tbody></table>
+<h3 id='meta'>- Meta</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>assessment-score</td>
+<td>float</td>
+<td>The user&#39;s score on this assessment (<code>0.0</code> is 0%, <code>1.0</code> is 100%)</td>
+</tr>
+<tr>
+<td>can-read</td>
+<td>boolean</td>
+<td>Whether the user has read permissions to this assignment. Will be false if the user has not cleared a prerequisite and the user wasn&#39;t granted access by other means such as being an instructor or admin</td>
+</tr>
+<tr>
+<td>memory-aggregate.last-study-time</td>
+<td>datetime</td>
+<td>The time which the user last studied this assignment</td>
+</tr>
+<tr>
+<td>memory-aggregate.progress</td>
+<td>float</td>
+<td>The progress on this assignment (<code>0.0</code> is unstarted, <code>1.0</code> is complete)</td>
+</tr>
+<tr>
+<td>memory-aggregate.score</td>
+<td>float</td>
+<td>This is the &quot;mastery level&quot; the user has reached on the assignment</td>
+</tr>
+<tr>
+<td>prereq-assignment-id</td>
+<td>int</td>
+<td>The id of the assignment that is a prerequisite to this assignment</td>
+</tr>
+<tr>
+<td>prereq-type</td>
+<td>int</td>
+<td>The type of prerequisite. Currently &#39;Level&#39; is the only valid value. This means for the user to access this assignment, the prereq-assignment&#39;s <code>memory-aggregate.score</code> must be greater or equal to prereq-value</td>
+</tr>
+<tr>
+<td>prereq-value</td>
+<td>int</td>
+<td>The value needed to be achieved to pass the prerequisite.</td>
+</tr>
+</tbody></table>
+<h1 id='courses'>Courses</h1><h2 id='get-courses'>Get courses</h2><pre class="highlight shell tab-shell"><code>curl https://partners.cerego.com/v3/courses
+    -H <span class="s2">"Content-Type: application/json"</span>
+    -H <span class="s2">"Authorization: Bearer &lt;API_KEY&gt;"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"courses"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"created-at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-07-26T04:10:32.000Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Introduction to the Cerego API"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"introduction-to-the-cerego-api"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"users-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"admin-users-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"student-users-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"goal-list-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"goals-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"reports-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"published"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"state-updated-at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"instructor-names"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Mr. Professor"</span><span class="p">],</span><span class="w">
+        </span><span class="s2">"ic-items-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"assignments-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"external-id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"654321"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"partner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"21"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"partners"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"images"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v3/courses/introduction-to-the-cerego-api"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"settings"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"instructor"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"can-edit"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"lti"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"progress"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"percent-started"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"last-study-time"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"payment-required"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"cost"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123457"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"courses"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"created-at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-07-26T06:01:10.000Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The learning science behind the banana revolution"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"the-learning-science-behind-the-banana-revolution"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"users-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"admin-users-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"student-users-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"goal-list-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"goals-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"reports-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"published"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"state-updated-at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"instructor-names"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Dr. Knowitall"</span><span class="p">],</span><span class="w">
+        </span><span class="s2">"ic-items-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"assignments-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"external-id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"666666"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"partner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"21"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"partners"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v3/courses/the-learning-science-behind-the-banana-revolution"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"settings"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"instructor"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"can-edit"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"lti"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"progress"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"percent-started"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"last-study-time"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"payment-required"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"cost"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"included"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"images"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"created-at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-04-04T22:06:29.000Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://assets.cerego.com/uploads/image/uploader/123456/h3ll0m473.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"orig-url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"orig-owner"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"license-id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"alt-tag"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v3/images/123456"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:3001/v3/courses?page%5Bnumber%5D=1&amp;page%5Bsize%5D=15"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:3001/v3/courses?page%5Bnumber%5D=2&amp;page%5Bsize%5D=15"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:3001/v3/courses?page%5Bnumber%5D=2510&amp;page%5Bsize%5D=15"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"total-pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">2510</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"total-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">37641</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves courses in a partner. By default it returns courses in the partner that the user is enrolled in as a student.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://partners.cerego.com/v3/courses</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>filter[partner_id]</td>
+<td>Required. Scopes the courses returned to the partner specified.</td>
+</tr>
+<tr>
+<td>user_id</td>
+<td>Specify a user id to get the courses that the user is enrolled in as a student. Defaults to the currently signed in user</td>
+</tr>
+<tr>
+<td>include_department_courses</td>
+<td>If specified, courses in departments of <code>partner_id</code> that the user is enrolled in will also be returned</td>
+</tr>
+<tr>
+<td>filter[in_library]</td>
+<td>Specify this filter to get courses in libraries that the user has access to (i.e., courses that the user can enroll in).</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>Orders the results based on the param. <br>Example: <code>name</code> - sort in alphabetical order</td>
+</tr>
+<tr>
+<td>page[number]</td>
+<td>Courses are paginated, use this to choose which page you want</td>
+</tr>
+<tr>
+<td>filter[role]</td>
+<td>Set to <code>instructor</code> to return all courses in the partner.</td>
+</tr>
+</tbody></table>
+<h3 id='course-object'>Course Object</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>created_at</td>
+<td>datetime</td>
+<td>When the course was created</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>The name of the course</td>
+</tr>
+<tr>
+<td>description</td>
+<td>string</td>
+<td>The description of the course</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>string</td>
+<td>Unique name for the course</td>
+</tr>
+<tr>
+<td>users-count</td>
+<td>integer</td>
+<td>The number of users in the course</td>
+</tr>
+<tr>
+<td>admin-users-count</td>
+<td>integer</td>
+<td>The number of admins (instructors) in the course</td>
+</tr>
+<tr>
+<td>student-users-count</td>
+<td>integer</td>
+<td>The number of students in the course</td>
+</tr>
+<tr>
+<td>goals-count</td>
+<td>integer</td>
+<td>The number of sets in the course</td>
+</tr>
+<tr>
+<td>state</td>
+<td>string</td>
+<td><code>published</code> Course is viewable <br> <code>unpublished</code> Course is hidden <br> <code>archived</code> Course is no longer in use</td>
+</tr>
+<tr>
+<td>state-updated-at</td>
+<td>datetime</td>
+<td>The most recent time that state was changed</td>
+</tr>
+<tr>
+<td>instructor-names</td>
+<td>array[string]</td>
+<td>A list of instructor names for the course</td>
+</tr>
+<tr>
+<td>ic-items-count</td>
+<td>integer</td>
+<td>The number of instructional items in the course</td>
+</tr>
+<tr>
+<td>assignments-count</td>
+<td>integer</td>
+<td>The number of sets and series in course</td>
+</tr>
+<tr>
+<td>external-id</td>
+<td>integer</td>
+<td>The LTI user associated with the course</td>
+</tr>
+</tbody></table>
+<h3 id='meta'>Meta</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>role</td>
+<td>string</td>
+<td><code>learner</code> You are a student in the course <br><code>instructor</code> You are teaching the course</td>
+</tr>
+<tr>
+<td>can-edit</td>
+<td>boolean</td>
+<td>Determines if you are allowed to edit this content</td>
+</tr>
+<tr>
+<td>progress</td>
+<td>float</td>
+<td>Your progress on this specific course (<code>0.0</code> is unstarted, <code>1.0</code> is complete)</td>
+</tr>
+<tr>
+<td>percent-started</td>
+<td>float</td>
+<td>The percentage of concepts you have started (<code>0.0</code> to <code>1.0</code>)</td>
+</tr>
+<tr>
+<td>last-study-time</td>
+<td>datetime</td>
+<td>The time which you last studied this course</td>
+</tr>
+<tr>
+<td>payment-required</td>
+<td>boolean</td>
+<td>You need to pay money to enable this course</td>
+</tr>
+<tr>
+<td>cost</td>
+<td>integer</td>
+<td>Cost in cents to enable the course</td>
+</tr>
+</tbody></table>
+<h1 id='users'>Users</h1><h2 id='get-all-users-in-a-course'>Get all users in a course</h2><pre class="highlight shell tab-shell"><code>curl https://partners.cerego.com/v3/courses/:id/users <span class="se">\</span>
+    -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+    -H <span class="s2">"Authorization: Bearer &lt;API_KEY&gt;"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1158898"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"created-at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014-05-25T03:06:08.000Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Abraham Lincoln"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bowtoabe"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bow.to.abe@example.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"last-logged-in-at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-12-14T18:55:14.000Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"guid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bff7431b-b099-4995-8b63-3b10a20223ab"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"courses.course_manager.members.studied_via_lti"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"user-partner-id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"settings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"notifications"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"daily-new-assignments"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"signup-nudges"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"daily-new-students"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"daily-goals-reached"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"weekly-stale-invitations"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"instructor"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"can-edit"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"lti"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"progress"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"percent-started"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"last-study-time"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"payment-required"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"cost"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"total-pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"total-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all users that are connected to a specific course.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://partners.cerego.com/v3/courses/:id/users</code></p>
+<h3 id='user-object'>User Object</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>created_at</td>
+<td>datetime</td>
+<td>When the user was created</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>The name of the user</td>
+</tr>
+<tr>
+<td>username</td>
+<td>string</td>
+<td>The username of the user</td>
+</tr>
+<tr>
+<td>email</td>
+<td>string</td>
+<td>The email of the user</td>
+</tr>
+<tr>
+<td>last-logged-in-at</td>
+<td>datetime</td>
+<td>Time of last log in by the user</td>
+</tr>
+<tr>
+<td>guid</td>
+<td>string</td>
+<td>An identifier for users that can be used across apps</td>
+</tr>
+<tr>
+<td>status</td>
+<td>string</td>
+<td><code>courses.course_manager.members.studied_via_lti</code> Student is connected to the course via LTI<br><code>courses.course_manager.members.studied</code> Student has studied the course, but is not an LTI user<br><code>courses.course_manager.members.invited</code> Student has received an invitation to join the course, but has not yet studied<br><code>courses.course_manager.members.no_invitation_sent</code> No invitation has been sent to the user yet</td>
+</tr>
+</tbody></table>
+<h3 id='meta'>Meta</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>role</td>
+<td>string</td>
+<td><code>learner</code> You are a student in the course <br><code>instructor</code> You are teaching the course without permission to edit<br><code>editor</code> Can edit: some content (only assigned sets and series)<br><code>content_manager</code> Can manage (add/delete/edit): all content (sets and series)<br><code>course_manager</code> Can manage (add/delete/edit): all content (sets and series) + all courses and assignments<br><code>admin</code> Can manage (add/delete/edit): all content (sets and series) + all courses and assignments + organization level features and users</td>
+</tr>
+<tr>
+<td>lti</td>
+<td>boolean</td>
+<td>The user has an LTI account connected</td>
+</tr>
+<tr>
+<td>progress</td>
+<td>float</td>
+<td>The user&#39;s progress on this specific course (<code>0.0</code> is unstarted, <code>1.0</code> is complete)</td>
+</tr>
+<tr>
+<td>percent-started</td>
+<td>float</td>
+<td>The percentage of concepts the user has started (<code>0.0</code> to <code>1.0</code>)</td>
+</tr>
+<tr>
+<td>last-study-time</td>
+<td>datetime</td>
+<td>The time which the user last studied this course</td>
+</tr>
+<tr>
+<td>payment-required</td>
+<td>boolean</td>
+<td>The user needs money to enable this course</td>
+</tr>
+<tr>
+<td>cost</td>
+<td>integer</td>
+<td>Cost in cents to enable this course</td>
+</tr>
+</tbody></table>
+<h2 id='add-a-user-to-a-course'>Add a user to a course</h2><pre class="highlight shell tab-shell"><code>curl https://partners.cerego.com/v3/courses/:id/users <span class="se">\</span>
+    -d <span class="s1">'{"email": "developers@cerego.com", "name": "Sarah Gough"}'</span> <span class="se">\</span>
+    -X POST <span class="se">\</span>
+    -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+    -H <span class="s2">"Authorization: Bearer &lt;API_KEY&gt;"</span>
+</code></pre>
+<blockquote>
+<p>If you successfully make your POST request you should receive a response that looks like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123460"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"created-at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-12-14T19:24:24.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Julius Caesar"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"allhailtheromanempire@example.com"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"all.hail.the.roman.empire@example.com"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"last-logged-in-at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"guid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"55d22545-92f2-40eb-9037-f9770c3516a9"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"courses.course_manager.members.invited"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"user-partner-id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"settings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"notifications"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"daily-new-assignments"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"student"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"can-edit"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"lti"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"progress"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"percent-started"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"last-study-time"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"payment-required"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"cost"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint adds a user to a course (or creates a new user if one does not exist)</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST https://partners.cerego.com/v3/courses/:id/users</code></p>
+<h3 id='request-parameters'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required?</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>email</td>
+<td>string</td>
+<td>no</td>
+<td>The email of the user you wish to add to the course. Required unless you specify member_id.</td>
+</tr>
+<tr>
+<td>member_id</td>
+<td>string</td>
+<td>no</td>
+<td>The member ID of the user you wish to add to the course. A member ID is a unique and unchanging identifier for the user that you have, for example an employee ID.  If you specify this, then you must also specify name, and not specify email.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>no</td>
+<td>The name of the user you wish to add</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">If an account doesn't already exist, we will send them a welcome email with a link and instructions to set a password.</aside>
+
+<aside class="warning">This endpoint is idempotent. (A user will not be added again if they are already in the course)</aside>
+<h2 id='get-a-user-in-a-course'>Get a user in a course</h2><pre class="highlight shell tab-shell"><code>curl https://partners.cerego.com/v3/courses/:id/users/:id <span class="se">\</span>
+    -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+    -H <span class="s2">"Authorization: Bearer &lt;API_KEY&gt;"</span>
+</code></pre>
+<blockquote>
+<p>If you successfully make your GET request you should receive a response that looks like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1849768"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"created-at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-12-14T19:24:24.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Marie Antionette"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cakeeaters"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cake.eaters@example.com"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"last-logged-in-at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-12-14T20:33:31.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"guid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"55d22545-92f2-40eb-9037-f9770c3516a9"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"courses.course_manager.members.invited"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"user-partner-id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"settings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"notifications"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"daily-new-assignments"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"student"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"can-edit"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"lti"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"progress"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"percent-started"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"last-study-time"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"payment-required"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"cost"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint gets information about a user within a course</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET https://partners.cerego.com/v3/courses/:id/users/:id</code></p>
+<h2 id='remove-a-user-from-a-course'>Remove a user from a course</h2><pre class="highlight shell tab-shell"><code>curl https://partners.cerego.com/v3/courses/:id/users/:id <span class="se">\</span>
+    -X DELETE <span class="se">\</span>
+    -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+    -H <span class="s2">"Authorization: Bearer &lt;API_KEY&gt;"</span>
+</code></pre>
+<blockquote>
+<p>If you successfully make your DELETE request you should receive a 204 No Content</p>
+</blockquote>
+
+<p>This endpoint deletes a user from a course</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>DELETE https://partners.cerego.com/v3/courses/:id/users/:id</code></p>
+
+<aside class="notice">Removing a user does NOT clear their memories or progress.</aside>
+<h2 id='get-users-in-a-partner'>Get users in a partner</h2>
+<p>This endpoint retrieves users in a partner.</p>
+<pre class="highlight shell tab-shell"><code>curl GET https://partners.cerego.com/v3/partners/:partner_id/users?query<span class="o">=</span>:member_id <span class="se">\</span>
+    -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+    -H <span class="s2">"Authorization: Bearer &lt;API_KEY&gt;"</span>
+</code></pre>
+<blockquote>
+<p>If you successfully make your GET request you should receive a response that looks like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1234567"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"created-at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-10-16T00:24:54.000Z"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"name"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"username"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"last-logged-in-at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"guid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"f105f8e0-122b-479d-98c7-97as65869de7a"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"has-password"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="s2">"emails"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="s2">"user-partner-id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="s2">"partner-user-tags"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"can-edit-partner"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"can-create-course"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"can-edit-course"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"can-create-content"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"can-manage-content"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"can-read-content"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"can-edit-content"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"can-manage-learners"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"total-pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total-count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-5'>HTTP Request</h3>
+<p><code>GET https://partners.cerego.com/v3/partners/:partner_id/users</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>query</td>
+<td>Specify a query if you are looking for a single user. The value should be either the member_id or email of the user.</td>
+</tr>
+<tr>
+<td>include_department_users</td>
+<td>If specified, users in departments of the partner will also be included.</td>
+</tr>
+<tr>
+<td>page[number]</td>
+<td>Results are paginated, use this to choose which page you want</td>
+</tr>
+</tbody></table>
+<h1 id='user-tags'>User Tags</h1><h2 id='about-user-tags'>About user tags</h2>
+<p>User tags can be used to assign custom tag values to a user. Smart Groups can then use these tags to automatically enroll users into courses based on the tag values. </p>
+
+<p>For example, you might set up a &quot;Country&quot; tag type for your account and then for each user set it to their country of residence. Then you could set up smart groups to automatically enroll users in the United States in one course, and users in Canada in a different course.  </p>
+<h2 id='set-a-user-39-s-tags'>Set a user&#39;s tags</h2><pre class="highlight shell tab-shell"><code>curl https://partners.cerego.com/v3/users/:userid/partner_user_tags <span class="se">\</span>
+    -d <span class="s1">'{ 
+          "tags": [{"partner_user_tag_type_id": "5", "value": "California"}, 
+                   {"partner_user_tag_type_id": "9", "value": "Marketing"}] 
+        }'</span> <span class="se">\</span>
+    -X POST <span class="se">\</span>
+    -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+    -H <span class="s2">"Authorization: Bearer &lt;API_KEY&gt;"</span>
+</code></pre>
+<p>This endpoint allows you to set tag values for a user. When using this you specify an array of objects, each object having a <code>partner_user_tag_type_id</code> and a <code>value</code> that should be set for that tag type. </p>
+
+<p>Tag types must be set up for your account ahead of time. Contact your customer support representative to know the ids for your account&#39;s tag types.   </p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>POST https://partners.cerego.com/v3/users/:userid/partner_user_tags</code></p>
+<h3 id='request-parameters'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required?</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>tags</td>
+<td>array</td>
+<td>yes</td>
+<td>An array of objects. Each object should have a <code>partner_user_tag_type_id</code> and a <code>value</code>. For example, if your account has a tag type of &quot;Country&quot; which has an ID of &quot;12&quot; and also a tag type of &quot;Employee ID&quot; which has an ID of &quot;13&quot; then you could set both of them with: <br> [{&quot;partner_user_tag_type_id&quot;: &quot;12&quot;, &quot;value&quot;: &quot;United States&quot;}, {&quot;partner_user_tag_type_id&quot;: &quot;13&quot;, &quot;value&quot;: &quot;B893247&quot;}]</td>
+</tr>
+</tbody></table>
+<h1 id='errors'>Errors</h1>
+<p>Cerego uses the following error codes:</p>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request -- Your request is invalid.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized -- Your Bearer token is wrong.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden -- The resource you requested is not available given your permissions.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found -- The specified resource could not be found.</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone -- The resource requested has been removed from our servers.</td>
+</tr>
+<tr>
+<td>418</td>
+<td>I&#39;m a teapot.</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too Many Requests -- You&#39;re requesting too many resources! Slow down!</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error -- We had a problem with our server. If the problem persists, please email us at <a href="mailto:support@cerego.com">support@cerego.com</a>.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
