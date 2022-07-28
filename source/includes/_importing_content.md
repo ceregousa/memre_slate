@@ -107,7 +107,7 @@ This endpoint creates an item within a set. You can optionally specify a questio
 
 | Parameter | Description                                           |
 | --------- | ----------------------------------------------------- |
-| question  | Optional text representing the question being asked.  |
+| question  | Optional text representing the question being asked   |
 | answer    | Optional text representing the answer to the question |
 
 ### HTTP Response
