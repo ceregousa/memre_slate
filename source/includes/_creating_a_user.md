@@ -1,6 +1,6 @@
 # Creating a User
 
-Every learner in your system should have a corresponding user in Cerego.
+Every learner in your system should have a corresponding user in Memre.
 
 ```shell
 curl 'https://partners.cerego.com/v3/partners/:partner_id/users' \
