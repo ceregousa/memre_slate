@@ -1,6 +1,10 @@
 # Importing Content
 
-Content in Cerego is organized into “sets” and “items”. A set is a collection of items and can have a maximum of 200 items. An item represents an individual thing that our learning engine optimizes the studying of. An item could be a single question and answer, or it could be multiple questions and answers that all quiz the same underlying concept (like various math questions that ask the user to multiply two numbers together).
+Content in Memre is organized into “sets” and “items”. A set is a collection of items and can have a maximum of 200 items.
+
+An item represents an individual concept that our learning engine optimizes the studying of. An item could be a single question and answer, or it could be multiple questions and answers that all quiz the same underlying concept (like various math questions that ask the user to multiply two numbers together).
+
+An item also doesn't have to be something simple like a question with an answer; it could be a task that the user must perform. For example, an app that teaches web development skills could have a task where the user has to modify some CSS to center an image on the screen. This could be an item. As long as it's something where you can report to our API if a user got it correct or incorrect, then our learning engine can optimize the learning of it.
 
 ## Creating a Set
 
@@ -103,7 +107,7 @@ This endpoint creates an item within a set. You can optionally specify a questio
 
 | Parameter | Description                                           |
 | --------- | ----------------------------------------------------- |
-| question  | Optional text representing the question being asked   |
+| question  | Optional text representing the question being asked.  |
 | answer    | Optional text representing the answer to the question |
 
 ### HTTP Response

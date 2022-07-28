@@ -5,8 +5,8 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - shell
 
 toc_footers:
-  - <a href='https://cerego.com/'>Check out the Cerego website</a>
-  - <a href='https://cerego.com/app/nav/partners/api_users'>Get your API Key</a>
+  # - <a href='https://cerego.com/'>Check out the Memre website</a>
+  # - <a href='https://cerego.com/app/nav/partners/api_users'>Get your API Key</a>
 includes:
   - introduction
   - authentication
@@ -15,10 +15,6 @@ includes:
   - saving_quiz_results
   - getting_items_to_study
   - getting_learning_stats
-  - assignments
-  - courses
-  - courses/users
-  - user_tags
   - errors
 
 search: true
