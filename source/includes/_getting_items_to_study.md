@@ -1,6 +1,6 @@
 # Getting Items to Study
 
-Our learning engine can predict which items a user should review in order to maximize long term retention.
+One of the most powerful features of the Memre learning engine is predicting the learning concepts (i.e., lessons) a user should review next. Memre can inform users of the time and day to maximize long-term retention. This can be a valuable feature of a higher subscription tier for your users as identifying ways to improve retention ultimately improves performance (i.e., users score better on quizzes) which drives value for the courses and your service.
 
 ## Getting items to study for maximal knowledge retention
 

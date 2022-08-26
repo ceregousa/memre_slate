@@ -1,6 +1,6 @@
 # Saving Quiz Results
 
-Every time a student studies an item in your system, you should send the results to our learning engine. This will allow our system to make predictions about various things for the student and also for the items that are being studied. Our system learns what items are easy or hard for a particular student and as multiple students study, it also learns which items are harder or easier than other items. It can use this information to make predictions about which items are the optimal items that a student should review, as well as predict a student’s “readiness score” for each item.
+Every time a user studies an item in your learning environment, you should send the results to our learning engine (remember that an item is anything which the user can get correct, incorrect, or almost correct). This allows the Memre learning engine to make predictions for the student about other learning items. For example, the system could tell the user that they aren’t ready for an advanced lesson (by reporting a lower readiness score) but that they should take the next lesson and quiz at 4pm on Wednesday (when they have tended to perform best). In fact, the Memre learning engine can constantly change and update readiness scores for all upcoming lessons. These scores can dynamically change based on the student’s performance in other lessons analyzed against the difficulty of the learning concepts.
 
 ## Save the results of a user studying an item
 
