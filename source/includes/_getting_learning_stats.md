@@ -1,6 +1,6 @@
 # Getting Learning Stats
 
-Our learning engine can give you info about the user's knowledge.
+The Memre learning engine can return detailed information about the user’s knowledge against key learning concepts. By doing so, you can utilize Memre to identify “expertise” in concepts and even acknowledge “mastery” in specific courses. For example, if a user reaches a specific knowledge level in a concept, you could award them a badge or provide them a certificate acknowledging their expert status.
 
 ## Getting the predicted best times of day for the user to study
 
@@ -73,7 +73,9 @@ The values will be in the range of 0 to 1. Higher numbers correspond to better t
 
 ## Getting the user's readiness score for a set
 
-A user’s readiness score is a value between 0 and 1 indicating how likely the user will be able to recall the concepts of the set. See this [blog post](https://www.cerego.com/blog/new-feature-release-readiness-score-measures-knowledge-in-real-time) for more information.
+One of the most powerful features of the Memre learning engine is the readiness score. It doesn’t do anyone any good if a user in your learning environment engages with a concept or lesson for which they aren’t prepared. They feel bad, by performing poorly, and may even blame you for not adequately preparing them. The readiness score circumvents that whole process by informing students how likely they are to succeed at a given set (remember that a set can be a collection of quiz questions or even a group of questions testing against the same concept). The value of the score is between 0 and 1 which you can multiple by 100 to produce a percentage of readiness. So if a readiness score for a user is .87, you can show them that they are 87% likely to recall the concepts in that lesson. A higher readiness score, then, would help predict success on assessments and quizzes about that concept.
+
+For a detailed look at the readiness score feature, take a look at [this blog post](https://www.cerego.com/blog/new-feature-release-readiness-score-measures-knowledge-in-real-time).
 
 ```shell
 curl 'https://partners.cerego.com/v3/users/123456/sets/943433/learning_stats?partner_id=779' \
